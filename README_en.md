@@ -31,8 +31,8 @@ The system supports recognition of the following fields and adopts specific reco
 
 | Field Name | Recognition Method | Remarks |
 | :--- | :--- | :--- |
-| **HKID Title** | YOLO + OCR | Identifies if it is a "Permanent Identity Card" |
-| **Chinese Name** | YOLO + OCR | Automatically converts full-width characters to half-width |
+| **HKID Title** | YOLO + OCR | Extract the document title, for example, "HONG KONG PERMANENT IDENTITY CARD" |
+| **Chinese Name** | YOLO + OCR | Automatically remove extra spaces |
 | **English Name** | YOLO + OCR | Formatted as `SURNAME, Given Names` |
 | **ID Number** | YOLO + OCR | Includes the check digit in brackets and performs Check Digit validation |
 | **Date of Birth** | YOLO + OCR | Used for age calculation |
