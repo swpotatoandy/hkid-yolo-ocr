@@ -115,6 +115,12 @@ Example 6: Overseas-issued Adult Hong Kong Permanent Identity Card
 
 **⚠️ Note: All HKID card images above are taken from a [public documents](https://gia.info.gov.hk/general/202509/30/P2025093000197_513643_1_1759197627959.pdf) of the Hong Kong government and do not involve any real personal data.**
 
+## 🚧 Roadmap
+
+1. Enable the program to distinguish whether an ID card contains the holder's photograph, thus differentiating between a Minor ID card and a Hong Kong Permanent ID card issued overseas.
+2. Retrain the YOLO model to label the Chinese commercial code portion, thereby improving the accuracy of extracting the holder's Chinese name by decoding the code.
+3. Allow users to choose whether to upload images of both the front and back of the ID card simultaneously, and separately train a YOLO model applicable to the back of the ID card, thus addressing the current limitation of not being able to distinguish the age range of non-permanent resident ID card holders.
+
 ## ⚠️ Disclaimer and Legal Notice
 
 1.  **Personal Data Privacy**: This program is for technical research and academic exchange only. Users must strictly comply with the Personal Data (Privacy) Ordinance (Cap. 486) and related laws and regulations of Hong Kong when using this program to process any images containing personal data (such as real Hong Kong Identity Cards).
