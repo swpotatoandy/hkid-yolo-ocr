@@ -1,12 +1,10 @@
 # Hong Kong Smart Identity Card Recognition System (YOLO + OCR)
 
-<div style="text-align: center;">
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 [繁體中文](README.md) | **English**
 
 ***This README file was translated by Google Gemini 3 and has not yet been manually reviewed.***
-</div>
 
 This project is a Python-based desktop application designed to recognize information on the new Hong Kong Smart Identity Card. The system combines the **YOLOv11** object detection model and **PaddleOCR** text recognition technology to automatically locate and read key fields on the ID card, providing real-time data validation and analysis.
 
