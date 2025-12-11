@@ -1,5 +1,7 @@
 # Hong Kong Smart Identity Card Recognition System (YOLO + OCR)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 [繁體中文](README.md) | **English**
 
 ***This README file was translated by Google Gemini 3 and has not yet been manually reviewed.***
