@@ -640,7 +640,7 @@ class MainWindow(QMainWindow):
         else:
             if "永久" in c_type:
                 res_status = "永久性居民"
-                id_age_type = "小童身份證"
+                id_age_type = "小童身份證 或 海外簽發永久性居民身份證"
             else:
                 res_status = "非永久性居民"
                 id_age_type = "香港居民身份證（無法分辨年齡層）"
@@ -695,7 +695,7 @@ class MainWindow(QMainWindow):
             (3, "出生日期\t\t"),
             (4, "性別\t\t"),
             (6, "簽發日期\t\t"),
-            (5, "首次簽發日期\t\t"),
+            (5, "首次簽發於\t\t"),
         ]
 
         lines = []
@@ -716,6 +716,19 @@ class MainWindow(QMainWindow):
             elif cls_id == 3:
                 val = data_map.get(cls_id, "")
                 val_display = val + age_info
+            elif cls_id == 6:
+                val = data_map.get(cls_id, "")
+                if val:
+                    val_display = re.sub(r'(\d+)-(\d+)-(\d+)', r'\1日-\2月-\3年', val)
+                else:
+                    val_display = ""
+            elif cls_id == 5:
+                val = data_map.get(cls_id, "")
+                if val:
+                    tmp = re.sub(r'[()]', '', val)
+                    val_display = re.sub(r'(\d+)-(\d+)', r'(\1月-\2年)', tmp)
+                else:
+                    val_display = ""
             else:
                 val = data_map.get(cls_id, "")
                 if cls_id == 7 and val:

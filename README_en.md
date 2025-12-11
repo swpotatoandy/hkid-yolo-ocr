@@ -16,7 +16,17 @@ This application provides a graphical user interface (PyQt5) where users can upl
 
 ## ✅ Scope of Application
 
-This program only supports the **New Smart Identity Card** issued on or after **November 26, 2018**.
+This program only supports the following identity cards issued on or after November 26, 2018:
+
+1. Adult Hong Kong Permanent Identity Card
+2. Juvenile Hong Kong Permanent Identity Card
+3. Minor Hong Kong Permanent Identity Card *
+4. Adult Hong Kong Identity Card
+5. Juvenile Hong Kong Identity Card
+6. Adult/Juvenile Overseas-issued Hong Kong Permanent Identity Card *
+7. Minor Overseas-issued Hong Kong Permanent Identity Card *
+
+*As both the Minor Permanent Identity Card and the overseas-issued Permanent Identity Card contain the word "Permanent" and do not have an asterisk symbol, this program cannot distinguish between these types of identity cards.
 
 ## 🤖 Trained YOLO Models
 
@@ -83,11 +93,27 @@ If your operating system does not have `uv` installed, please refer to the offic
 
 ## 🏞️ Demo Images
 
-![demo1](assets/demo1.png)
-Demo 1 (Adult ID Card Sample) (The ID card image is a public sample from the Hong Kong Immigration Department and does not belong to any real personal data.)
+![case1](assets/case1.png)
+Example 1: Adult Hong Kong Permanent Identity Card
 
-![demo1](assets/demo2.png)
-Demo 2 (Expired Child ID Card, holder is an adult) (Dummy data, not a real ID card)
+![case2](assets/case2.png)
+Example 2: Juvenile Hong Kong Permanent Identity Card
+
+``The English meaning of the red sentence at the bottom of the screenshot is 'The holder is over 18 years old and needs to renew their adult ID card; this document has expired.'``
+
+![case3](assets/case3.png)
+Example 3: Minor Hong Kong Permanent Identity Card
+
+![case4](assets/case4.png)
+Example 4: Adult Hong Kong Identity Card (the holder does not have a Chinese name)
+
+![case5](assets/case5.png)
+Example 5: Juvenile Hong Kong Identity Card
+
+![case6](assets/case6.png)
+Example 6: Overseas-issued Adult Hong Kong Permanent Identity Card
+
+**⚠️ Note: All HKID card images above are taken from a [public documents](https://gia.info.gov.hk/general/202509/30/P2025093000197_513643_1_1759197627959.pdf) of the Hong Kong government and do not involve any real personal data.**
 
 ## ⚠️ Disclaimer and Legal Notice
 
