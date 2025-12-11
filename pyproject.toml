@@ -1,0 +1,13 @@
+[project]
+name = "yolo-hkid"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "paddleocr>=3.3.2",
+    "paddlepaddle>=3.2.2",
+    "pillow>=12.0.0",
+    "pyqt5>=5.15.11",
+    "ultralytics>=8.3.235",
+]
