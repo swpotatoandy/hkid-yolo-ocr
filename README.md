@@ -1,5 +1,7 @@
 # 香港智能身份證識別系統 (YOLO + OCR)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **繁體中文** | [English](README_en.md)
 
 本項目是一個基於 Python 的桌面程式，專門用於識別香港新智能身份證上的資訊。系統結合了 **YOLOv11** 目標檢測模型與 **PaddleOCR** 文字識別技術，能夠自動定位並讀取身份證上的關鍵欄位，並提供即時的資料驗證與分析功能。
