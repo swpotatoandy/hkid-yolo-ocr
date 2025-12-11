@@ -626,18 +626,25 @@ class MainWindow(QMainWindow):
         data_map = {row['class_id']: row['value'] for row in rows}
         symbols = data_map.get(8, "")
         c_type = data_map.get(0, "")
-        res_status = "非永久"
-        if symbols and ("***" in symbols or "A" in symbols):
-            res_status = "永久"
-        elif "永久" in c_type:
-            res_status = "永久"
-        elif not c_type and not symbols:
-            res_status = ""
-        id_age_type = "成人身份證"
-        if res_status == "永久" and symbols.count('*') == 1:
+        
+        star_count = symbols.count('*')
+        res_status = ""
+        id_age_type = ""
+
+        if star_count == 3:
+            res_status = "永久性居民"
+            id_age_type = "成人身份證"
+        elif star_count == 1:
+            res_status = "永久性居民"
             id_age_type = "兒童身份證"
-        elif not res_status:
-            id_age_type = ""
+        else:
+            if "永久" in c_type:
+                res_status = "永久性居民"
+                id_age_type = "小童身份證"
+            else:
+                res_status = "非永久性居民"
+                id_age_type = "香港居民身份證（無法分辨年齡層）"
+
         res_code_map = {
             "A": "有香港居留權",
             "R": "有香港入境權",
@@ -726,7 +733,7 @@ class MainWindow(QMainWindow):
         
         base_msg = "請核對上述資料是否與證件相符。<br>根據香港法例第 486 章《個人資料（私隱）條例》，閣下有責任妥善處理及保管經手處理的個人資料。"
         
-        if calculated_age is not None and calculated_age >= 18 and id_age_type == "兒童身份證":
+        if calculated_age is not None and calculated_age >= 18 and id_age_type in ["兒童身份證", "小童身份證"]:
             warning = "<span style='color: red; font-weight: bold; font-size: 14pt;'>持證人已年滿 18 歲並需要更換成人身份證，此證件已過期</span><br><br>"
             self.bottom_info_text.setHtml(warning + base_msg)
         else:
